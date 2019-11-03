@@ -6,8 +6,6 @@
 
     moment = moment && moment.hasOwnProperty('default') ? moment['default'] : moment;
 
-    // const moment = require('moment');
-
     const signsList = {
         ARIES: 'Aries',
         TAURUS: 'Taurus',
@@ -147,17 +145,11 @@
                 }
             });
             return result;
-        } catch {
+        } catch (e) {
+            console.error(e);
             return null;
         }
     };
-
-    // module.exports = {
-    //     signs: signsList,
-    //     signsInOrder: signsInOrder,
-    //     signsRanges: signsRanges,
-    //     getSign: getSign
-    // }
 
     exports.getSign = getSign;
     exports.signsInOrder = signsInOrder;

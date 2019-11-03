@@ -22,7 +22,15 @@
             width: 100%;
             text-align: center;
         }
+
+        h1 {
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
     <script src="../dist/bundle.js"></script>
 </head>
 <body>
@@ -30,13 +38,19 @@
         <input type="date" id="source">
     </div>
 
+    <h1 id="target"></h1>
+
     <script>
         document.getElementById('source').addEventListener('change', function (event) {
             if (event.target.value) {
                 let date = event.target.value.toString();
-                // console.log(date);
                 let format = 'YYYY-MM-DD';
-                console.log(astro_lib.getSign('02/04/1989'));
+                let sign = astro_lib.getSign(date, format);
+                if (sign) {
+                    document.getElementById('target').textContent = sign;
+                } else {
+                    console.error('Something went wrong');
+                }
             }
         });
     </script>

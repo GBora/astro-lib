@@ -3,6 +3,10 @@ export default {
     output: {
       file: 'dist/bundle.js',
       format: 'umd',
-      name: 'astro_lib'
+      name: 'astro_lib',
+      globals: {
+          'moment': 'moment'
+      },
+      external: [ 'moment' ]
     }
   };

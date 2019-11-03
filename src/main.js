@@ -1,4 +1,3 @@
-// const moment = require('moment');
 import moment from 'moment';
 
 export const signsList = {
@@ -140,15 +139,9 @@ export const getSign = (date, format) => {
             }
         })
         return result;
-    } catch {
+    } catch (e) {
+        console.error(e);
         return null;
     }
 }
-
-// module.exports = {
-//     signs: signsList,
-//     signsInOrder: signsInOrder,
-//     signsRanges: signsRanges,
-//     getSign: getSign
-// }
 

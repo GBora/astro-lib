@@ -1,8 +1,8 @@
 {
   "name": "astro-lib",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A simple js library for astrology.",
-  "main": "astro_lib.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config"
