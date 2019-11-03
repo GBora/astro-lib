@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en_gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Astro-lib test</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .date-wrapper {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .date-wrapper input {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <script src="../dist/bundle.js"></script>
+</head>
+<body>
+    <div class="date-wrapper">
+        <input type="date" id="source">
+    </div>
+
+    <script>
+        document.getElementById('source').addEventListener('change', function (event) {
+            if (event.target.value) {
+                let date = event.target.value.toString();
+                // console.log(date);
+                let format = 'YYYY-MM-DD';
+                console.log(astro_lib.getSign('02/04/1989'));
+            }
+        });
+    </script>
+</body>
+</html>

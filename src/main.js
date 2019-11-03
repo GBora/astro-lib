@@ -1,6 +1,7 @@
-const moment = require('moment');
+// const moment = require('moment');
+import moment from 'moment';
 
-const signsList = {
+export const signsList = {
     ARIES: 'Aries',
     TAURUS: 'Taurus',
     GEMINI: 'Gemini',
@@ -15,7 +16,7 @@ const signsList = {
     PISCES: 'Pisces'
 }
 
-const signsInOrder = [
+export const signsInOrder = [
     signsList.ARIES,
     signsList.TAURUS,
     signsList.GEMINI,
@@ -31,7 +32,7 @@ const signsInOrder = [
 ];
 
 // Months are 0 based, thanks js :|
-const signsRanges = [
+export const signsRanges = [
     {
         startMonth: 2,
         startDay: 21,
@@ -118,7 +119,7 @@ const signsRanges = [
     }
 ];
 
-const getSign = (date, format) => {
+export const getSign = (date, format) => {
     try {
         format =  format || 'DD/MM/YYYY';
         let birthDate = moment(date, format);
@@ -144,10 +145,10 @@ const getSign = (date, format) => {
     }
 }
 
-module.exports = {
-    signs: signsList,
-    signsInOrder: signsInOrder,
-    signsRanges: signsRanges,
-    getSign: getSign
-}
+// module.exports = {
+//     signs: signsList,
+//     signsInOrder: signsInOrder,
+//     signsRanges: signsRanges,
+//     getSign: getSign
+// }
 
