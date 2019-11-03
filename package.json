@@ -1,0 +1,17 @@
+{
+  "name": "astro-lib",
+  "version": "1.0.0",
+  "description": "A simple js library for astrology.",
+  "main": "astro_lib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "astrology"
+  ],
+  "author": "George Bora <gpbora@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
