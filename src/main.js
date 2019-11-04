@@ -1,5 +1,9 @@
 import moment from 'moment';
 
+/** @constant
+    @type {Object}
+    @default
+*/
 export const signsList = {
     ARIES: 'Aries',
     TAURUS: 'Taurus',
@@ -15,6 +19,9 @@ export const signsList = {
     PISCES: 'Pisces'
 }
 
+/** @constant
+    @default
+*/
 export const signsInOrder = [
     signsList.ARIES,
     signsList.TAURUS,
@@ -118,6 +125,12 @@ export const signsRanges = [
     }
 ];
 
+/**
+ * This function returns a string which is the astrological sign of a person born on that date
+ * @param {string} date a string representing the date
+ * @param {string} [format=YYYY-MM-DD] a optional string representing the format of the date, must be moment.js compatible
+ * @returns {string} the name of the sign.
+ */
 export const getSign = (date, format) => {
     try {
         format =  format || 'YYYY-MM-DD';
