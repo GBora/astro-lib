@@ -126,7 +126,7 @@
 
     const getSign = (date, format) => {
         try {
-            format =  format || 'DD/MM/YYYY';
+            format =  format || 'YYYY-MM-DD';
             let birthDate = moment(date, format);
             let birthDay = birthDate.date();
             let birthMonth =  birthDate.month();
