@@ -1,7 +1,7 @@
 export default {
     input: 'src/main.js',
     output: {
-      file: 'dist/bundle.js',
+      file: 'dist/astro_lib.js',
       format: 'umd',
       name: 'astro_lib',
       globals: {

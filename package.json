@@ -1,10 +1,10 @@
 {
   "name": "astro-lib",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A simple js library for astrology.",
-  "main": "src/main.js",
+  "main": "dist/astro_lib.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha",
     "build": "rollup --config"
   },
   "keywords": [
@@ -18,11 +18,20 @@
   "bugs": {
     "url": "https://github.com/GBora/astro-lib/issues"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm test",
+      "pre-push": "npm test"
+    }
+  },
   "license": "MIT",
   "dependencies": {
     "moment": "^2.24.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "husky": "^3.0.9",
+    "mocha": "^6.2.2",
     "rollup": "^1.26.3"
   }
 }
