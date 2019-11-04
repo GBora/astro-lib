@@ -11,7 +11,7 @@ Under the hood, this uses the [moment.js](https://momentjs.com/) library to hand
 See examples folder in the repository.
 
 ## Documentation
-See the documentation [here](/docs/index.html) in the docs folder.
+See the documentation [here](https://gbora.github.io/astro-lib/) in the docs folder.
 
 ## License
 MIT, see accompaning license file.
