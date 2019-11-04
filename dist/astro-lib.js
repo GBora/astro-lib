@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('moment')) :
     typeof define === 'function' && define.amd ? define(['exports', 'moment'], factory) :
-    (global = global || self, factory(global['astro-lib'] = {}, global.moment));
+    (global = global || self, factory(global.astro_lib = {}, global.moment));
 }(this, (function (exports, moment) { 'use strict';
 
     moment = moment && moment.hasOwnProperty('default') ? moment['default'] : moment;

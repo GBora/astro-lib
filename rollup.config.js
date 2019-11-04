@@ -3,7 +3,7 @@ export default {
     output: {
       file: 'dist/astro-lib.js',
       format: 'umd',
-      name: 'astro-lib',
+      name: 'astro_lib',
       globals: {
           'moment': 'moment'
       },
