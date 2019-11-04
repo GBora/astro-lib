@@ -1,5 +1,5 @@
 const expect  = require('chai').expect;
-const astro_lib = require('../dist/astro_lib.js');
+const astro_lib = require('../dist/astro-lib.js');
 
 it('library should export array with 12 zodiac signs', function(done) {
     expect(astro_lib.signsInOrder.length).to.equal(12);

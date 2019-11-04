@@ -1,11 +1,15 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('moment')) :
     typeof define === 'function' && define.amd ? define(['exports', 'moment'], factory) :
-    (global = global || self, factory(global.astro_lib = {}, global.moment));
+    (global = global || self, factory(global['astro-lib'] = {}, global.moment));
 }(this, (function (exports, moment) { 'use strict';
 
     moment = moment && moment.hasOwnProperty('default') ? moment['default'] : moment;
 
+    /** @constant
+        @type {Object}
+        @default
+    */
     const signsList = {
         ARIES: 'Aries',
         TAURUS: 'Taurus',
@@ -21,6 +25,9 @@
         PISCES: 'Pisces'
     };
 
+    /** @constant
+        @default
+    */
     const signsInOrder = [
         signsList.ARIES,
         signsList.TAURUS,
@@ -124,6 +131,12 @@
         }
     ];
 
+    /**
+     * This function returns a string which is the astrological sign of a person born on that date
+     * @param {string} date a string representing the date
+     * @param {string} [format=YYYY-MM-DD] a optional string representing the format of the date, must be moment.js compatible
+     * @returns {string} the name of the sign.
+     */
     const getSign = (date, format) => {
         try {
             format =  format || 'YYYY-MM-DD';

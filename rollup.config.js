@@ -1,9 +1,9 @@
 export default {
     input: 'src/main.js',
     output: {
-      file: 'dist/astro_lib.js',
+      file: 'dist/astro-lib.js',
       format: 'umd',
-      name: 'astro_lib',
+      name: 'astro-lib',
       globals: {
           'moment': 'moment'
       },

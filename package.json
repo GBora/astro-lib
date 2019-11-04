@@ -1,8 +1,8 @@
 {
   "name": "astro-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple js library for astrology.",
-  "main": "dist/astro_lib.js",
+  "main": "dist/astro-lib.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
     "build": "rollup --config",
