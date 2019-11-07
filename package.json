@@ -1,6 +1,6 @@
 {
   "name": "astro-lib",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple js library for astrology.",
   "main": "dist/astro-lib.js",
   "scripts": {

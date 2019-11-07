@@ -43,6 +43,14 @@
         signsList.PISCES,
     ];
 
+    const cardinalSigns = [signsList.ARIES, signsList.CANCER, signsList.LIBRA, signsList.CAPRICORN];
+    const fixedSigns = [signsList.LEO, signsList.AQUARIUS, signsList.TAURUS, signsList.SCORPIO];
+    const mutableSigns = [signsList.SAGITTARIUS, signsList.VIRGO, signsList.PISCES, signsList.GEMINI];
+
+    const fireSigns = [signsList.ARIES, signsList.LEO, signsList.SAGITTARIUS];
+    const earthSigns = [signsList.TAURUS, signsList.VIRGO, signsList.CAPRICORN];
+    const airSigns = [signsList.GEMINI, signsList.LIBRA, signsList.AQUARIUS];
+
     // Months are 0 based, thanks js :|
     const signsRanges = [
         {
@@ -211,7 +219,83 @@
         return oppositeSigns[signA] === signB;
     };
 
+    const modalities = {
+        CARDINAL: 'Cardinal',
+        FIXED: 'Fixed',
+        MUTABLE: 'Mutable'
+    };
+
+    const elements = {
+        FIRE: 'Fire',
+        EARTH: 'Earth',
+        WATER: 'Water',
+        AIR: 'Air'
+    };
+
+    /**
+     * This function returns a string which is the modality of the sign that was passed into it.
+     * @param {string} sign the sign we want the modality for.
+     * @returns {{string|null}} the modality or null if it can't be found.
+     */
+    const getModality = (sign) => {
+
+        if (cardinalSigns.indexOf(sign) !== -1) {
+            return modalities.CARDINAL;
+        }
+
+        if (fixedSigns.indexOf(sign) !== -1) {
+            return modalities.FIXED;
+        }
+
+        if (mutableSigns.indexOf(sign) !== -1) {
+            return modalities.MUTABLE;
+        }
+
+        return null
+    };
+
+    /**
+     * This function returns a string which is the element of the sign that was passed into it.
+     * @param {string} sign the sign we want the element for.
+     * @returns {{string|null}} the element or null if it can't be found.
+     */
+    const getElement = (sign) => {
+
+        if (fireSigns.indexOf(sign) !== -1) {
+            return elements.FIRE;
+        }
+
+        if (earthSigns.indexOf(sign) !== -1) {
+            return elements.EARTH;
+        }
+
+        if (airSigns.indexOf(sign) !== -1) {
+            return elements.AIR;
+        }
+
+        if (waterSigns.indexOf(sign) !== -1) {
+            return elements.WATER;
+        }
+
+        return null
+    };
+
+    /**
+     * This function returns an object with all the data about the sign.
+     * @param {string} sign the sign we want the info for.
+     * @returns {object} an object with the data as fields.
+     */
+    const getCompleteSignInfo = (sign) => {
+        return {
+            modality: getModality(sign),
+            element: getElement(sign),
+        }
+    };
+
     exports.areSignsOpposite = areSignsOpposite;
+    exports.getCompleteSignInfo = getCompleteSignInfo;
+    exports.getElement = getElement;
+    exports.getModality = getModality;
     exports.getOppositeSign = getOppositeSign;
     exports.getSign = getSign;
     exports.signsInOrder = signsInOrder;

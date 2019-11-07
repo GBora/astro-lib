@@ -34,3 +34,12 @@ export const signsInOrder = [
     signsList.AQUARIUS,
     signsList.PISCES,
 ];
+
+export const cardinalSigns = [signsList.ARIES, signsList.CANCER, signsList.LIBRA, signsList.CAPRICORN];
+export const fixedSigns = [signsList.LEO, signsList.AQUARIUS, signsList.TAURUS, signsList.SCORPIO];
+export const mutableSigns = [signsList.SAGITTARIUS, signsList.VIRGO, signsList.PISCES, signsList.GEMINI];
+
+export const fireSigns = [signsList.ARIES, signsList.LEO, signsList.SAGITTARIUS];
+export const earthSigns = [signsList.TAURUS, signsList.VIRGO, signsList.CAPRICORN];
+export const airSigns = [signsList.GEMINI, signsList.LIBRA, signsList.AQUARIUS];
+export const watersigns = [signsList.CANCER, signsList.SCORPIO, signsList.PISCES];
