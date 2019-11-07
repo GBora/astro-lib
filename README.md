@@ -21,4 +21,6 @@ Under the hood, this uses the [moment.js](https://momentjs.com/) library to hand
 MIT, see accompaning license file.
 
 ## TODO
-Add more functionality to the library
+
+* Investigate adding function to get Moon sign.
+* Add testing for modality and elements
