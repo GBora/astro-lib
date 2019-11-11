@@ -1,12 +1,13 @@
 {
   "name": "astro-lib",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple js library for astrology.",
   "main": "dist/astro-lib.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
     "build": "rollup --config",
-    "build-docs": "documentation build src/** -f html -o docs/"
+    "build-docs": "documentation build src/** -f html -o docs/",
+    "build-types": "dts-gen -m -overwrite astro-lib"
   },
   "keywords": [
     "astrology"
@@ -27,6 +28,7 @@
     }
   },
   "license": "MIT",
+  "types": "astro-lib.d.ts",
   "dependencies": {
     "moment": "^2.24.0"
   },

@@ -23,4 +23,3 @@ MIT, see accompaning license file.
 ## TODO
 
 * Investigate adding function to get Moon sign.
-* Add testing for modality and elements

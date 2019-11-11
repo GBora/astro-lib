@@ -30,3 +30,10 @@ it('library should correctly dettermine opposite signs', function(done) {
     expect(astro_lib.areSignsOpposite(astro_lib.signsList.LEO, astro_lib.signsList.AQUARIUS)).to.equal(true);
     done();
 });
+
+it('library should correctly determine modality and element', function(done) {
+    let completeInfo = astro_lib.getCompleteSignInfo(astro_lib.signsList.GEMINI);
+    expect(completeInfo.modality).to.equal('Mutable');
+    expect(completeInfo.element).to.equal('Air');
+    done();
+});
